@@ -1,0 +1,6 @@
+img {
+    max-width: 100%; /* Faz a imagem se ajustar ao tamanho da tela */
+    width: 300px;    /* Define uma largura fixa (opcional) */
+    height: auto;    /* Mantém a proporção correta para não distorcer */
+    border-radius: 8px; /* Opcional: deixa os cantos arredondados */
+}
