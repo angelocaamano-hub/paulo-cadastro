@@ -1,25 +1,133 @@
 <!DOCTYPE html>
-<html lang="pt_br">
-    <head>
-  <meta charset="UTF-8">     
-  <title></title>
-  <h1> Caamano Adoções.</h1>
-  <h2>Bom neste site estamos mostrando os animais que estão esperando familias que podam dar carinho e amor.</h2>
-  <h3>Para mais informações para adotar um pet você pode clicar para começar seu cadastro. </h3>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caamano Adoções</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+ 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #f4f7f6;
+      color: #333333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .card-container {
+      background-color: #ffffff;
+      max-width: 600px;
+      width: 100%;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .card-container:hover {
+      transform: translateY(-5px);
+    }
+
+    .hero-img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 30px 25px;
+    }
+
+    h1 {t-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caamano Adoções</title>
+      color: #2c3e50;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    h2 {
+      color: #555555;
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+
+    h3 {
+      color: #7f8c8d;
+      font-size: 0.95rem;
+      font-weight: 400;
+      line-height: 1.5;
+      margin-bottom: 30px;
+    }
+
+    .btn-adopt {
+      display: inline-block;
+      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      color: #ffffff;
+      padding: 15px 30px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+      transition: all 0.3s ease;
+    }
+
+    .btn-adopt:hover {
+      background: linear-gradient(135deg, #feb47b, #ff7e5f);
+      box-shadow: 0 6px 20px rgba(255, 126, 95, 0.6);
+      transform: scale(1.03);
+    }
+
+    .btn-adopt:active {
+      transform: scale(0.98);
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
 </head>
 
-<body>    
-<img src="Gemini_Generated_Image_o9cw8ro9cw8ro9cw.jpg" alt="Loja foto">
+<body>
 
+  <div class="card-container">
+    <img class="hero-img" src="loja_foto.jpg" alt="Loja foto - Caamano Adoções">
+    
+    <div class="content">
+      <h1>Caamano Adoções</h1>
+      <h2>Em nosso site mostramos os animais que estão esperando por famílias que possam dar todo o carinho e amor.</h2>
+      <h3>Para mais informações e para adotar um pet, clique abaixo e comece seu cadastro!</h3>
 
-
-  <a href="cadastro.html">
-    <button type="button">cadastre-se para adotar seu futuro pet</button>
-</a>
-
-
-
-    </head>
+      <a href="cadastro.html">
+        <button class="btn-adopt" type="button">Cadastre-se para adotar seu futuro pet</button>
+      </a>
+    </div>
+  </div>
 
 </body>
 </html>

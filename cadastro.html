@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+
+  <style>
+body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 30px auto;
+      background-color: #ffffff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #333333;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #555555;.voltar:hover {
+      text-decoration: underline;
+    }
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #cccccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    button {
+      width: 100%;
+      background-color: #ff7e5f;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      font-weight: bold;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #e0694d;
+    }
+
+    .voltar {
+      display: block;
+      text-align: center;
+      margin-top: 15px;
+      color: #666666;
+      text-decoration: none;
+    }
+    .voltar:hover {
+      text-decoration: underline;
+    }
+
+  </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Cadastro para Adoção</h2>
+    
+        <form action="#" method="POST">
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+    
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="seu@email.com" required>
+    
+          <label for="telefone">Telefone / WhatsApp:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 90000-0000" required>
+    
+          <label for="pet">Qual pet deseja adotar?</label>
+          <select id="pet" name="pet" required>
+            <option value="">Selecione...</option>
+            <option value="cachorro">Cachorro</option>
+            <option value="gato">Gato</option>
+          </select>
+    
+          <button type="submit">Cadastrar</button>
+        </form>
+    
+        <a href="Menu.html" class="voltar">← Voltar para a página inicial</a>
+      </div>
+
+</body>
+</html>
