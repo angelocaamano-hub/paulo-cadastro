@@ -2,5 +2,141 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caamano Adoções</title>
+  <title>Animais para Adoção - Caamano Adoções</title>
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #f4f4f9;
+      padding: 20px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      color: #666;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card-pet {
+      background-color: #ffffff;
+      border-radius: 10px;
+      width: 280px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      padding-bottom: 20px;
+    }
+
+    .card-pet img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-pet h2 {
+      color: #2c3e50;
+      font-size: 1.3rem;
+      margin: 15px 0 5px 0;
+    }
+
+    .card-pet p {
+      color: #7f8c8d;
+      font-size: 0.95rem;
+      padding: 0 15px;
+      margin-bottom: 15px;
+    }
+
+    .btn-adotar {
+      display: inline-block;
+      background-color: #ff7e5f;
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-weight: bold;
+    }
+
+    .btn-adotar:hover {
+      background-color: #e0694d;
+    }
+
+    .voltar {
+      display: block;
+      text-align: center;
+      margin-top: 30px;
+      color: #666;
+      text-decoration: none;
+    }
+
+    .voltar:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Nossos Pets para Adoção</h1>
+    <p>Conheça os amiguinhos que estão procurando um lar repleto de carinho!</p>
+  </header>
+
+  <main class="galeria">
+
+    <div class="card-pet">
+      <img src="po.jpg" alt="dragão guerreiro">
+      <h2>Po</h2>
+      <p>Macho, 2 anos. Brincalhão e muito dócil.</p>
+      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
+    </div>
+
+    <div class="card-pet">
+      <img src="rato.jpeg" alt="rata Mia">
+      <h2>Mia</h2>
+      <p>Fêmea, 1 ano. Calma, carinhosa e adora carinho.</p>
+      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
+    </div>
+
+    <div class="card-pet">
+      <img src="salchicha.jpeg" alt="Cão Bob">
+      <h2>Bob</h2>
+      <p>Macho, 3 anos. Adora passear e convive bem com crianças.</p>
+      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
+    </div>
+
+    <div class="card-pet">
+      <img src="images.jpeg" alt="periquito forte">
+      <h2>Luna</h2>
+      <p>Fêmea, 6 meses. Muito esperta e adora brincar com bolinhas.</p>
+      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
+    </div>
+
+  </main>
+
+  <a href="Menu.html" class="voltar">← Voltar para a página inicial</a>
+
+</body>
+</html>
