@@ -2,52 +2,116 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Animais para Adoção - Caamano Adoções</title>
-  
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      background-color: #f4f4f9;
+      background-color: #eef2f5;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(255, 126, 95, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(44, 62, 80, 0.08) 0px, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232c3e50' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M30 30c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10zm-10 0c0-5.523-4.477-10-10-10S0 24.477 0 30s4.477 10 10 10 10-4.477 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+      color: #222222;
       padding: 20px;
+      min-height: 100vh;
+    }
+
+    .wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+  
+    .accessibility-bar {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+      margin-bottom: 25px;
+      background-color: #ffffff;
+      padding: 10px 16px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .accessibility-bar span {
+      font-size: 14px;
+      color: #555555;
+      font-weight: 500;
+      margin-right: auto;
+    }
+
+    .btn-font {
+      background-color: #2c3e50;
+      color: #ffffff;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-font:hover {
+      background-color: #1a252f;
     }
 
     header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 35px;
     }
 
     header h1 {
-      color: #333;
+      color: #1a252f;
+      font-size: 2.1em;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
     header p {
-      color: #666;
+      color: #555555;
+      font-size: 1em;
     }
 
     .galeria {
       display: flex;
       flex-wrap: wrap;
-      gap: 20px;
+      gap: 25px;
       justify-content: center;
-      max-width: 1000px;
-      margin: 0 auto;
     }
 
     .card-pet {
       background-color: #ffffff;
-      border-radius: 10px;
+      border-radius: 20px;
       width: 280px;
       overflow: hidden;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
       text-align: center;
-      padding-bottom: 20px;
+      padding-bottom: 25px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .card-pet:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
     }
 
     .card-pet img {
@@ -57,86 +121,162 @@
     }
 
     .card-pet h2 {
-      color: #2c3e50;
-      font-size: 1.3rem;
-      margin: 15px 0 5px 0;
+      color: #1a252f;
+      font-size: 1.35em;
+      font-weight: 700;
+      margin: 18px 0 6px 0;
     }
 
     .card-pet p {
-      color: #7f8c8d;
-      font-size: 0.95rem;
-      padding: 0 15px;
-      margin-bottom: 15px;
+      color: #555555;
+      font-size: 0.95em;
+      padding: 0 18px;
+      margin-bottom: 20px;
+      line-height: 1.5;
     }
 
+    
     .btn-adotar {
       display: inline-block;
-      background-color: #ff7e5f;
-      color: white;
+      margin: 0 20px;
+      background: linear-gradient(135deg, #e65c00, #f9d423);
+      color: #ffffff;
       text-decoration: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-weight: bold;
+      padding: 12px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 12px rgba(230, 92, 0, 0.3);
+      transition: all 0.3s ease;
     }
 
     .btn-adotar:hover {
-      background-color: #e0694d;
+      background: linear-gradient(135deg, #f9d423, #e65c00);
+      box-shadow: 0 6px 18px rgba(230, 92, 0, 0.5);
+      transform: scale(1.03);
     }
 
+    
     .voltar {
       display: block;
       text-align: center;
-      margin-top: 30px;
-      color: #666;
+      margin-top: 40px;
+      color: #555555;
       text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95em;
+      transition: color 0.2s;
     }
 
     .voltar:hover {
+      color: #e65c00;
       text-decoration: underline;
+    }
+
+    
+    button:focus,
+    a:focus {
+      outline: 3px solid #0056b3;
+      outline-offset: 3px;
     }
   </style>
 </head>
 
 <body>
 
-  <header>
-    <h1>Nossos Pets para Adoção</h1>
-    <p>Conheça os amiguinhos que estão procurando um lar repleto de carinho!</p>
-  </header>
+  <div class="wrapper" id="conteudo-principal">
 
-  <main class="galeria">
-
-    <div class="card-pet">
-      <img src="po.jpg" alt="dragão guerreiro">
-      <h2>Po</h2>
-      <p>Macho, 2 anos. Brincalhão e muito dócil.</p>
-      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
+ 
+    <div class="accessibility-bar" aria-label="Controle de tamanho de texto">
+      <span>Tamanho do texto:</span>
+      <button type="button" class="btn-font" onclick="alterarFonte(-2)" aria-label="Diminuir fonte">A-</button>
+      <button type="button" class="btn-font" onclick="resetarFonte()" aria-label="Tamanho padrão">A</button>
+      <button type="button" class="btn-font" onclick="alterarFonte(2)" aria-label="Aumentar fonte">A+</button>
     </div>
 
-    <div class="card-pet">
-      <img src="rato.jpeg" alt="rata Mia">
-      <h2>Mia</h2>
-      <p>Fêmea, 1 ano. Calma, carinhosa e adora carinho.</p>
-      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
+    <header>
+      <h1>Nossos Pets para Adoção</h1>
+      <p>Conheça os amiguinhos que estão procurando um lar repleto de carinho!</p>
+    </header>
+
+    <main class="galeria">
+
+      <article class="card-pet">
+        <img src="po.jpg" alt="Panda Po sorrindo para a foto">
+        <div>
+          <h2>Po</h2>
+          <p>Macho, 2 anos. Brincalhão e muito dócil.</p>
+        </div>
+        <a href="cadastro.html" class="btn-adotar" aria-label="Quero adotar o pet Po">Quero Adotar</a>
+      </article>
+
+      <article class="card-pet">
+        <img src="rato.jpeg" alt="Ratinha Mia olhando curiosa">
+        <div>
+          <h2>Mia</h2>
+          <p>Fêmea, 1 ano. Calma, carinhosa e adora carinho.</p>
+        </div>
+        <a href="cadastro.html" class="btn-adotar" aria-label="Quero adotar a pet Mia">Quero Adotar</a>
+      </article>
+
+      <article class="card-pet">
+        <img src="salchicha.jpeg" alt="Cachorro Bob da raça salsicha">
+        <div>
+          <h2>Bob</h2>
+          <p>Macho, 3 anos. Adora passear e convive bem com crianças.</p>
+        </div>
+        <a href="cadastro.html" class="btn-adotar" aria-label="Quero adotar o pet Bob">Quero Adotar</a>
+      </article>
+
+      <article class="card-pet">
+        <img src="images.jpeg" alt="Periquito Luna em seu puleiro">
+        <div>
+          <h2>Luna</h2>
+          <p>Fêmea, 6 meses. Muito esperta e adora brincar com bolinhas.</p>
+        </div>
+        <a href="cadastro.html" class="btn-adotar" aria-label="Quero adotar a pet Luna">Quero Adotar</a>
+      </article>
+
+    </main>
+
+    <a href="Menu.html" class="voltar">← Voltar para a página inicial</a>
+
+  </div>
+
+ 
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class= !-- Widget VLibras --></div>"vw-plugin-top-wrapper"></div>
     </div>
+  </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
 
-    <div class="card-pet">
-      <img src="salchicha.jpeg" alt="Cão Bob">
-      <h2>Bob</h2>
-      <p>Macho, 3 anos. Adora passear e convive bem com crianças.</p>
-      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
-    </div>
+   
+    let tamanhoAt <!-- Widget VLibras --> = 16;
+    const tamanhoMinimo = 12;
+    const tamanhoMaximo = 24;
 
-    <div class="card-pet">
-      <img src="images.jpeg" alt="periquito forte">
-      <h2>Luna</h2>
-      <p>Fêmea, 6 meses. Muito esperta e adora brincar com bolinhas.</p>
-      <a href="cadastro.html" class="btn-adotar">Quero Adotar</a>
-    </div>
+    function alterarFonte(valor) {
+      tamanhoAtual += valor;
 
-  </main>
+      if (tamanhoAtual < tamanhoMinimo) tamanhoAtual = tamanhoMinimo;
+      if (tamanhoAtual > tamanhoMaximo) tamanhoAtual = tamanhoMaximo;
 
-  <a href="Menu.html" class="voltar">← Voltar para a página inicial</a>
+      const container = document.getElementById('conteudo-principal');
+      container.style.fontSize = tamanhoAtual + 'px';
+    }
+
+    function resetarFonte() {
+      tamanhoAtual = 16;
+      const container = document.getElementById('conteudo-principal');
+      container.style.fontSize = '16px';
+    }
+  </script>
 
 </body>
 </html>

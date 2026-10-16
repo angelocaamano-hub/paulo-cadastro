@@ -18,8 +18,13 @@
     }
 
     body {
-      background-color: #f4f7f6;
-      color: #333333;
+      /* Fundo profissional com gradiente suave e padrão discreto */
+      background-color: #eef2f5;
+      background-image: 
+        radial-gradient(at 0% 0%, rgba(255, 126, 95, 0.08) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(44, 62, 80, 0.08) 0px, transparent 50%),
+        url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232c3e50' fill-opacity='0.03' fill-rule='evenodd'%3E%3Cpath d='M30 30c0-5.523 4.477-10 10-10s10 4.477 10 10-4.477 10-10 10-10-4.477-10-10zm-10 0c0-5.523-4.477-10-10-10S0 24.477 0 30s4.477 10 10 10 10-4.477 10-10z'/%3E%3C/g%3E%3C/svg%3E");
+      color: #222222;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -27,19 +32,22 @@
       padding: 20px;
     }
 
+    /* Container principal */
     .card-container {
       background-color: #ffffff;
       max-width: 600px;
       width: 100%;
       border-radius: 20px;
       overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
       text-align: center;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
     .card-container:hover {
       transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
     }
 
     .hero-img {
@@ -50,26 +58,26 @@
     }
 
     .content {
-      padding: 30px 25px;
+      padding: 35px 30px;
     }
 
     h1 {
-      color: #2c3e50;
-      font-size: 2rem;
+      color: #1a252f;
+      font-size: 2.1rem;
       font-weight: 700;
       margin-bottom: 12px;
     }
 
-    h2 {
-      color: #555555;
+    p.description {
+      color: #333333;
       font-size: 1.05rem;
       font-weight: 400;
       line-height: 1.6;
       margin-bottom: 15px;
     }
 
-    h3 {
-      color: #7f8c8d;
+    p.instructions {
+      color: #555555;
       font-size: 0.95rem;
       font-weight: 400;
       line-height: 1.5;
@@ -78,51 +86,72 @@
 
     .btn-adopt {
       display: inline-block;
-      background: linear-gradient(135deg, #ff7e5f, #feb47b);
+      background: linear-gradient(135deg, #e65c00, #f9d423);
       color: #ffffff;
-      padding: 15px 30px;
+      padding: 16px 32px;
       border: none;
       border-radius: 50px;
       font-size: 1rem;
-      font-weight: 600;
+      font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.5px;
       cursor: pointer;
-      box-shadow: 0 4px 15px rgba(255, 126, 95, 0.4);
+      box-shadow: 0 4px 15px rgba(230, 92, 0, 0.3);
       transition: all 0.3s ease;
+      text-decoration: none;
     }
 
     .btn-adopt:hover {
-      background: linear-gradient(135deg, #feb47b, #ff7e5f);
-      box-shadow: 0 6px 20px rgba(255, 126, 95, 0.6);
+      background: linear-gradient(135deg, #f9d423, #e65c00);
+      box-shadow: 0 6px 20px rgba(230, 92, 0, 0.5);
       transform: scale(1.03);
     }
 
-    .btn-adopt:active {
-      transform: scale(0.98);
+    /* Acessibilidade: foco visível para navegação por teclado */
+    .btn-adopt:focus,
+    a:focus {
+      outline: 4px solid #0056b3;
+      outline-offset: 4px;
     }
 
     a {
       text-decoration: none;
+      display: inline-block;
     }
   </style>
 </head>
 
 <body>
 
-  <div class="card-container">
-    <img class="hero-img" src="loja_foto.jpg" alt="Loja foto - Caamano Adoções">
+  <main class="card-container">
+    <img class="hero-img" src="loja_foto.jpg" alt="Foto da fachada da loja Caamano Adoções com animais">
     
     <div class="content">
       <h1>Caamano Adoções</h1>
-      <h2>Em nosso site mostramos os animais que estão esperando por famílias que possam dar todo o carinho e amor.</h2>
-      <h3>Para mais informações e para adotar um pet, clique abaixo e comece seu cadastro!</h3>
+      <p class="description">
+        Em nosso site mostramos os animais que estão esperando por famílias que possam dar todo o carinho e amor.
+      </p>
+      <p class="instructions">
+        Para mais informações e para adotar um pet, clique abaixo e comece seu cadastro!
+      </p>
 
-      <a href="Cachorros_em_adoção.html">
+      <a href="Cachorros_em_adoção.html" aria-label="Cadastrar-se para adotar um pet">
         <button class="btn-adopt" type="button">Cadastre-se para adotar seu futuro pet</button>
       </a>
     </div>
+  </main>
+
+  <!-- Widget VLibras para pessoas surdas ou com deficiência auditiva -->
+  <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
   </div>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 
 </body>
 </html>
